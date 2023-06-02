@@ -1,2 +1,5 @@
+# For What?
+I make this repo for my development purposes
+
 ## Notes 
-Host Port:Container Port
+Port in docker -> Host Port:Container Port
