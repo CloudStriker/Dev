@@ -22,5 +22,5 @@ services:
             POSTGRES_USER: umami
             POSTGRES_PASSWORD: umami123
         volumes:
-            - ./umami/data:/var/lib/postgresql/data
+            - /home/umami/data:/var/lib/postgresql/data
         restart: always
