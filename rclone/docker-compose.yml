@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+    rclone:
+        container_name: rclone
+        image: rclone/rclone:latest
+        ports:
+          - "5572:5572"
+        environment:
+          - PHP_TZ=Asia/Tokyo
+          - PUID=1000
+          - PGID=1000
+        command: rcd --rc-web-gui --rc-addr :5572 --rc-user username --rc-pass password
+        volumes:
+          - /home/rclone/:/config/rclone
+          - /home/rclone/:/logs
+        restart: always
