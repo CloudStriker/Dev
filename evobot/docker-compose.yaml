@@ -1,0 +1,8 @@
+---
+services:
+    evobot:
+        environment:
+            - TOKEN=
+        volumes:
+            - /home/tmp/MusicQueue.ts:/home/evobot/structs/MusicQueue.ts
+        image: eritislami/evobot
