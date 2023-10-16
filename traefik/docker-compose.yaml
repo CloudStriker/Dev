@@ -1,5 +1,4 @@
 ---
-# -- (Optional) When using a custom network
 networks:
   traefik:
     external: true
@@ -15,10 +14,8 @@ services:
     volumes:
       - ./config:/etc/traefik
       - /var/run/docker.sock:/var/run/docker.sock:ro
-    # -- (Optional) When using Cloudflare as Cert Resolver
     environment:
-      - CF_DNS_API_TOKEN=7D9cRHvgY7V8m8elJsuyTDtqwcUZ1DYgKMtISXuL
-    # -- (Optional) When using a custom network
+      - CF_DNS_API_TOKEN=CF_DNS_API_TOKEN
     networks:
       - traefik
     restart: unless-stopped

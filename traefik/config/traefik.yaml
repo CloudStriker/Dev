@@ -25,7 +25,6 @@ global:
 entryPoints:
   web:
     address: :80
-    # -- (Optional) Redirect all HTTP to HTTPS
     http:
       redirections:
         entryPoint:
