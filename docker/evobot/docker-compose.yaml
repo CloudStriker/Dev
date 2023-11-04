@@ -1,8 +1,9 @@
----
+version: '3.3'
 services:
     evobot:
+        container_name: clicknow_bot
         environment:
             - TOKEN=
-        volumes:
-            - /home/tmp/MusicQueue.ts:/home/evobot/structs/MusicQueue.ts
         image: eritislami/evobot
+        volumes:
+            - ./structs/MusicQueue.ts:/home/evobot/structs/MusicQueue.ts
