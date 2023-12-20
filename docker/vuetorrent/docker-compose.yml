@@ -12,18 +12,6 @@ services:
       - UMASK=002
       - TZ=Etc/UTC
     volumes:
-      - /home/vuetorrent:/config
-
-# Run with CLI
-# add "-d" after run if the installation work to detach
-# 
-# docker run  --rm \
-#     --name qbittorrent \
-#     -p 8080:8080 \
-#     -e PUID=1000 \
-#     -e PGID=1000 \
-#     -e UMASK=002 \
-#     -e TZ="Etc/UTC" \
-#     -v /home/vuetorrent:/config \
-#     ghcr.io/hotio/qbittorrent
+      - ./config:/config
+      - ./data:/data
 
